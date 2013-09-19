@@ -8,7 +8,6 @@ import jogo.InterfaceJogo;
 import jogo.Jogador;
 import jogo.TelaInicialComNiveis;
 import jogo.ThreadAtivaBomba;
-
 import fachadaparadao.FachadaDAO;
 
 public class MainTestWatford
@@ -27,6 +26,12 @@ public class MainTestWatford
 		String nomeJogador = telaInicial.getNomeJogador();
 		while(nomeJogador == null)
 		{
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			nomeJogador = telaInicial.getNomeJogador();
 		}
 		
